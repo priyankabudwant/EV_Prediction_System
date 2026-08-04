@@ -1,0 +1,10 @@
+flask
+pandas
+numpy
+scikit-learn
+xgboost
+shap
+joblib
+tensorflow
+python -m streamlit run realtime_dashboard.py
+py -m uvicorn app:app --reload

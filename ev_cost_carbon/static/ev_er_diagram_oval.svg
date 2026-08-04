@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #183153; }
+      .entityText { font: 700 20px Arial, sans-serif; fill: #10243e; }
+      .attrText { font: 16px Arial, sans-serif; fill: #17324d; }
+      .relText { font: 700 18px Arial, sans-serif; fill: #17324d; }
+      .smallText { font: 14px Arial, sans-serif; fill: #35506b; }
+      .entity { fill: #e8f3ff; stroke: #2a6db0; stroke-width: 3; rx: 8; ry: 8; }
+      .relationship { fill: #fff2cc; stroke: #b8860b; stroke-width: 3; }
+      .attribute { fill: #f8fbff; stroke: #4f87c2; stroke-width: 2.5; }
+      .keyAttr { fill: #eef9ec; stroke: #2f8f46; stroke-width: 3; }
+      .line { stroke: #597ea6; stroke-width: 2.5; }
+      .dashed { stroke-dasharray: 8 6; }
+    </style>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#fcfdff"/>
+  <text x="900" y="50" text-anchor="middle" class="title">GreenVolt EV Cost &amp; Carbon Project - Oval ER Diagram</text>
+
+  <!-- Entities -->
+  <rect x="120" y="340" width="220" height="90" class="entity"/>
+  <text x="230" y="395" text-anchor="middle" class="entityText">EV_INPUT</text>
+
+  <rect x="760" y="120" width="220" height="90" class="entity"/>
+  <text x="870" y="175" text-anchor="middle" class="entityText">MODEL</text>
+
+  <rect x="760" y="530" width="260" height="90" class="entity"/>
+  <text x="890" y="585" text-anchor="middle" class="entityText">PREDICTION_RESULT</text>
+
+  <rect x="1330" y="320" width="220" height="90" class="entity"/>
+  <text x="1440" y="375" text-anchor="middle" class="entityText">FEATURE_IMPACT</text>
+
+  <rect x="1320" y="760" width="220" height="90" class="entity"/>
+  <text x="1430" y="815" text-anchor="middle" class="entityText">CHART_ASSET</text>
+
+  <rect x="760" y="920" width="220" height="90" class="entity"/>
+  <text x="870" y="975" text-anchor="middle" class="entityText">DATASET</text>
+
+  <!-- Relationships -->
+  <polygon points="540,345 630,425 540,505 450,425" class="relationship"/>
+  <text x="540" y="430" text-anchor="middle" class="relText">submits</text>
+
+  <polygon points="900,285 980,345 900,405 820,345" class="relationship"/>
+  <text x="900" y="350" text-anchor="middle" class="relText">serves</text>
+
+  <polygon points="1140,480 1235,575 1140,670 1045,575" class="relationship"/>
+  <text x="1140" y="582" text-anchor="middle" class="relText">explains</text>
+
+  <polygon points="1140,770 1235,845 1140,920 1045,845" class="relationship"/>
+  <text x="1140" y="850" text-anchor="middle" class="relText">generates</text>
+
+  <polygon points="900,730 980,790 900,850 820,790" class="relationship"/>
+  <text x="900" y="795" text-anchor="middle" class="relText">trains</text>
+
+  <!-- Main connector lines -->
+  <line x1="340" y1="385" x2="450" y2="425" class="line"/>
+  <line x1="630" y1="425" x2="760" y2="575" class="line"/>
+  <line x1="870" y1="210" x2="890" y2="530" class="line dashed"/>
+  <line x1="980" y1="575" x2="1045" y2="575" class="line"/>
+  <line x1="1235" y1="575" x2="1330" y2="365" class="line"/>
+  <line x1="930" y1="620" x2="1045" y2="845" class="line"/>
+  <line x1="1235" y1="845" x2="1320" y2="805" class="line"/>
+  <line x1="890" y1="620" x2="900" y2="730" class="line"/>
+  <line x1="900" y1="850" x2="870" y2="920" class="line"/>
+  <line x1="870" y1="210" x2="900" y2="285" class="line"/>
+  <line x1="900" y1="405" x2="890" y2="530" class="line"/>
+
+  <!-- Cardinality labels -->
+  <text x="390" y="395" class="smallText">1</text>
+  <text x="705" y="505" class="smallText">M</text>
+  <text x="883" y="270" class="smallText">1</text>
+  <text x="885" y="445" class="smallText">M</text>
+  <text x="1008" y="565" class="smallText">1</text>
+  <text x="1280" y="500" class="smallText">M</text>
+  <text x="995" y="760" class="smallText">1</text>
+  <text x="1270" y="825" class="smallText">0..1</text>
+  <text x="880" y="690" class="smallText">M</text>
+  <text x="875" y="890" class="smallText">M</text>
+
+  <!-- EV_INPUT attributes -->
+  <ellipse cx="120" cy="220" rx="95" ry="36" class="keyAttr"/>
+  <text x="120" y="225" text-anchor="middle" class="attrText">distance_km_per_day</text>
+  <line x1="145" y1="255" x2="190" y2="340" class="line"/>
+
+  <ellipse cx="60" cy="300" rx="70" ry="30" class="attribute"/>
+  <text x="60" y="305" text-anchor="middle" class="attrText">fuel_type</text>
+  <line x1="110" y1="320" x2="120" y2="350" class="line"/>
+
+  <ellipse cx="75" cy="470" rx="85" ry="30" class="attribute"/>
+  <text x="75" y="475" text-anchor="middle" class="attrText">vehicle_type</text>
+  <line x1="155" y1="458" x2="120" y2="410" class="line"/>
+
+  <ellipse cx="210" cy="180" rx="95" ry="32" class="attribute"/>
+  <text x="210" y="185" text-anchor="middle" class="attrText">vehicle_age_years</text>
+  <line x1="220" y1="212" x2="235" y2="340" class="line"/>
+
+  <ellipse cx="325" cy="220" rx="100" ry="34" class="attribute"/>
+  <text x="325" y="225" text-anchor="middle" class="attrText">trip_days_per_year</text>
+  <line x1="312" y1="254" x2="280" y2="340" class="line"/>
+
+  <ellipse cx="365" cy="300" rx="120" ry="34" class="attribute"/>
+  <text x="365" y="305" text-anchor="middle" class="attrText">fuel_vehicle_mileage_kmpl</text>
+  <line x1="345" y1="332" x2="300" y2="340" class="line"/>
+
+  <ellipse cx="385" cy="475" rx="110" ry="34" class="attribute"/>
+  <text x="385" y="480" text-anchor="middle" class="attrText">battery_health_percent</text>
+  <line x1="330" y1="455" x2="290" y2="430" class="line"/>
+
+  <ellipse cx="240" cy="560" rx="120" ry="34" class="attribute"/>
+  <text x="240" y="565" text-anchor="middle" class="attrText">charging ratios &amp; prices</text>
+  <line x1="240" y1="526" x2="240" y2="430" class="line"/>
+
+  <!-- MODEL attributes -->
+  <ellipse cx="700" cy="70" rx="80" ry="28" class="keyAttr"/>
+  <text x="700" y="75" text-anchor="middle" class="attrText">model_type</text>
+  <line x1="740" y1="95" x2="790" y2="120" class="line"/>
+
+  <ellipse cx="860" cy="40" rx="105" ry="28" class="attribute"/>
+  <text x="860" y="45" text-anchor="middle" class="attrText">cost_model_path</text>
+  <line x1="865" y1="68" x2="865" y2="120" class="line"/>
+
+  <ellipse cx="1015" cy="70" rx="112" ry="28" class="attribute"/>
+  <text x="1015" y="75" text-anchor="middle" class="attrText">carbon_model_path</text>
+  <line x1="980" y1="95" x2="940" y2="120" class="line"/>
+
+  <ellipse cx="1070" cy="170" rx="90" ry="28" class="attribute"/>
+  <text x="1070" y="175" text-anchor="middle" class="attrText">encoder_path</text>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="980" y2="175" class="line"/>
+  <line x1="980" y1="175" x2="965" y2="185" class="line"/>
+
+  <ellipse cx="1040" cy="250" rx="90" ry="28" class="attribute"/>
+  <text x="1040" y="255" text-anchor="middle" class="attrText">feature_path</text>
+  <line x1="980" y1="235" x2="950" y2="210" class="line"/>
+
+  <!-- PREDICTION_RESULT attributes -->
+  <ellipse cx="610" cy="510" rx="105" ry="30" class="keyAttr"/>
+  <text x="610" y="515" text-anchor="middle" class="attrText">annual_distance_km</text>
+  <line x1="710" y1="525" x2="760" y2="548" class="line"/>
+
+  <ellipse cx="660" cy="650" rx="110" ry="32" class="attribute"/>
+  <text x="660" y="655" text-anchor="middle" class="attrText">fuel_cost_rs_per_year</text>
+  <line x1="748" y1="638" x2="780" y2="620" class="line"/>
+
+  <ellipse cx="895" cy="680" rx="95" ry="30" class="attribute"/>
+  <text x="895" y="685" text-anchor="middle" class="attrText">ev_cost_rs_per_year</text>
+  <line x1="895" y1="650" x2="895" y2="620" class="line"/>
+
+  <ellipse cx="1110" cy="650" rx="145" ry="32" class="attribute"/>
+  <text x="1110" y="655" text-anchor="middle" class="attrText">predicted_cost_savings_rs_per_year</text>
+  <line x1="1040" y1="625" x2="1015" y2="610" class="line"/>
+
+  <ellipse cx="1160" cy="510" rx="152" ry="32" class="attribute"/>
+  <text x="1160" y="515" text-anchor="middle" class="attrText">predicted_carbon_reduction_kg_per_year</text>
+  <line x1="1040" y1="548" x2="1010" y2="555" class="line"/>
+
+  <ellipse cx="890" cy="450" rx="110" ry="30" class="attribute"/>
+  <text x="890" y="455" text-anchor="middle" class="attrText">predicted_5yr_savings_rs</text>
+  <line x1="890" y1="480" x2="890" y2="530" class="line"/>
+
+  <ellipse cx="650" cy="430" rx="95" ry="28" class="attribute"/>
+  <text x="650" y="435" text-anchor="middle" class="attrText">trees_saved_equivalent</text>
+  <line x1="720" y1="445" x2="760" y2="540" class="line"/>
+
+  <ellipse cx="890" cy="760" rx="100" ry="28" class="attribute"/>
+  <text x="890" y="765" text-anchor="middle" class="attrText">benefit / risk scores</text>
+  <line x1="890" y1="732" x2="890" y2="620" class="line"/>
+
+  <!-- FEATURE_IMPACT attributes -->
+  <ellipse cx="1590" cy="260" rx="70" ry="28" class="keyAttr"/>
+  <text x="1590" y="265" text-anchor="middle" class="attrText">feature</text>
+  <line x1="1560" y1="285" x2="1495" y2="320" class="line"/>
+
+  <ellipse cx="1670" cy="355" rx="65" ry="28" class="attribute"/>
+  <text x="1670" y="360" text-anchor="middle" class="attrText">impact</text>
+  <line x1="1605" y1="360" x2="1550" y2="365" class="line"/>
+
+  <ellipse cx="1595" cy="450" rx="85" ry="28" class="attribute"/>
+  <text x="1595" y="455" text-anchor="middle" class="attrText">impact_kind</text>
+  <line x1="1520" y1="432" x2="1490" y2="408" class="line"/>
+
+  <!-- CHART_ASSET attributes -->
+  <ellipse cx="1605" cy="730" rx="85" ry="28" class="keyAttr"/>
+  <text x="1605" y="735" text-anchor="middle" class="attrText">chart_url</text>
+  <line x1="1560" y1="748" x2="1515" y2="760" class="line"/>
+
+  <ellipse cx="1610" cy="870" rx="82" ry="28" class="attribute"/>
+  <text x="1610" y="875" text-anchor="middle" class="attrText">file_name</text>
+  <line x1="1530" y1="850" x2="1510" y2="845" class="line"/>
+
+  <!-- DATASET attributes -->
+  <ellipse cx="630" cy="900" rx="95" ry="28" class="keyAttr"/>
+  <text x="630" y="905" text-anchor="middle" class="attrText">dataset_name</text>
+  <line x1="700" y1="915" x2="770" y2="940" class="line"/>
+
+  <ellipse cx="870" cy="1080" rx="80" ry="28" class="attribute"/>
+  <text x="870" y="1085" text-anchor="middle" class="attrText">file_path</text>
+  <line x1="870" y1="1052" x2="870" y2="1010" class="line"/>
+
+  <ellipse cx="1070" cy="900" rx="85" ry="28" class="attribute"/>
+  <text x="1070" y="905" text-anchor="middle" class="attrText">dataset_type</text>
+  <line x1="1000" y1="915" x2="950" y2="940" class="line"/>
+</svg>

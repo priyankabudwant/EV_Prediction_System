@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pandas
+scikit-learn
+joblib
+python -m uvicorn main:app --reload
+"charger_count": 50,
+  "fast_ratio": 0.6,
+  "avg_sessions": 130,
+  "occupancy": 0.6,
+  "ev_growth": 0.15,
+  "population_density": 12000

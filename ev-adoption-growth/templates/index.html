@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Adoption Growth Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">⚡ EV Adoption Growth Dashboard</h1>
+                <p class="subtitle">Analyze and Predict Electric Vehicle Trends</p>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <!-- Prediction Section -->
+            <section class="card prediction-card">
+                <h2 class="card-title">🔮 Future Prediction</h2>
+                <div class="form-group">
+                    <label for="category">Select Category:</label>
+                    <select id="category" class="input-field">
+                        <option value="">Loading...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="year">Select Year:</label>
+                    <input type="number" id="year" class="input-field" value="2030" min="2025" max="2050">
+                </div>
+                <button onclick="predictFuture()" class="btn btn-primary">Predict</button>
+                <div id="prediction-result" class="result-box"></div>
+            </section>
+
+            <!-- Top 5 Growth Section -->
+            <section class="card">
+                <h2 class="card-title">🚀 Top 5 Growing Categories (2035)</h2>
+                <div id="top5-container" class="stats-container">
+                    <div class="loader"></div>
+                </div>
+            </section>
+
+            <!-- CO2 Reduction Section -->
+            <section class="card">
+                <h2 class="card-title">🌱 CO2 Reduction Impact (2035)</h2>
+                <div id="co2-container" class="stats-container">
+                    <div class="loader"></div>
+                </div>
+            </section>
+
+            <!-- 2W vs 4W Comparison Chart -->
+            <section class="card chart-card">
+                <h2 class="card-title">📊 Two Wheeler vs Four Wheeler Comparison</h2>
+                <canvas id="comparison-chart"></canvas>
+            </section>
+
+            <!-- Yearly Trend Chart -->
+            <section class="card chart-card">
+                <h2 class="card-title">📈 Overall EV Adoption Trend</h2>
+                <canvas id="trend-chart"></canvas>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>© 2024 EV Adoption Analysis | Data-Driven Insights</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

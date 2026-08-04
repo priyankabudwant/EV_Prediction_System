@@ -1,0 +1,1 @@
+MODEL_PATH = "model/xgboost_failure_model.pkl"

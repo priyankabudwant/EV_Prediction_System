@@ -1,0 +1,106 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+*/venv/
+*/.venv/
+
+# Python packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# Node / React
+# =========================
+node_modules/
+*/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# React production builds
+*/build/
+coverage/
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+*.local
+
+# =========================
+# IDE / OS
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs / runtime files
+# =========================
+*.log
+logs/
+*.pid
+*.seed
+*.tmp
+tmp/
+temp/
+
+# =========================
+# Databases / local storage
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================
+# ML model artifacts
+# Keep training code in Git, store large model files separately.
+# =========================
+*.pkl
+*.joblib
+*.pth
+*.pt
+*.h5
+*.onnx
+
+# =========================
+# Generated media / reports
+# =========================
+*.pdf
+*.xlsx
+*.xls
+*.docx
+*.pptx
+
+# =========================
+# Misc
+# =========================
+.cache/
+.parcel-cache/
+.eslintcache
